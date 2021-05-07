@@ -4,9 +4,6 @@
     "description": "Authenticate to LinkedIn to receive your LinkedIn browser code",
     "repository": "https://github.com/orbit-love/linkedin-auth-app",
     "keywords": ["rails", "ruby", "orbit", "linkedin"],
-    "scripts": {
-      "postdeploy": "bundle exec rails s"
-    },
     "env": {
       "LINKEDIN_CLIENT_ID": {
         "description": "Please provide your LinkedIn Client ID",
