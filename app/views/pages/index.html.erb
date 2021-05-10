@@ -1,6 +1,86 @@
-<div class="jumbotron">
-  <h1>Welcome!</h1>
-  <p>Authenticate with LinkedIn below.</p>
-  <p>After authenticating, copy the code displayed in the next page and add it to your GitHub repository secrets.</p>
-  <li><%= link_to 'LinkedIn', '/auth/linkedin', method: :post %></li>
-</div>
+  <main>
+    <!-- Hero section -->
+    <div class="pt-8 overflow-hidden sm:pt-12 lg:relative lg:py-48">
+      <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl lg:grid lg:grid-cols-2 lg:gap-24">
+        <div>
+          <div>
+            <%= link_to( image_tag("384x384.png", :style => 'width:50%;'), image_path( "384x384.png", :style => 'width:50%;') ) %>
+          </div>
+          <div class="mt-20">
+            <div class="mt-6 sm:max-w-xl">
+              <h1 class="text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl">
+                Authorize the Orbit LinkedIn Integration App
+              </h1>
+              <p class="mt-6 text-xl text-gray-500">
+                This is a one-time step to obtain a LinkedIn code to use for the Orbit LinkedIn community integration
+              </p>
+            </div>
+            <button type="button" class="inline-flex items-center px-6 py-3 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+              <!-- Heroicon name: solid/mail -->
+              <svg viewBox="0 50 512 512" >
+                <path fill="#828282" d="M150.65,100.682c0,27.992-22.508,50.683-50.273,50.683c-27.765,0-50.273-22.691-50.273-50.683
+                C50.104,72.691,72.612,50,100.377,50C128.143,50,150.65,72.691,150.65,100.682z M143.294,187.333H58.277V462h85.017V187.333z
+                M279.195,187.333h-81.541V462h81.541c0,0,0-101.877,0-144.181c0-38.624,17.779-61.615,51.807-61.615
+                c31.268,0,46.289,22.071,46.289,61.615c0,39.545,0,144.181,0,144.181h84.605c0,0,0-100.344,0-173.915
+                s-41.689-109.131-99.934-109.131s-82.768,45.369-82.768,45.369V187.333z"/>
+              </svg>
+              <%= link_to 'Authorize LinkedIn', '/auth/linkedin', method: :post %>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="sm:mx-auto sm:max-w-3xl sm:px-6">
+        <div class="py-12 sm:relative sm:mt-12 sm:py-16 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+          <div class="hidden sm:block">
+            <div class="absolute inset-y-0 left-1/2 w-screen bg-gray-50 rounded-l-3xl lg:left-80 lg:right-0 lg:w-full"></div>
+            <svg class="absolute top-8 right-1/2 -mr-3 lg:m-0 lg:left-0" width="404" height="392" fill="none" viewBox="0 0 404 392">
+              <defs>
+                <pattern id="837c3e70-6c3a-44e6-8854-cc48c737b659" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                  <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+                </pattern>
+              </defs>
+              <rect width="404" height="392" fill="url(#837c3e70-6c3a-44e6-8854-cc48c737b659)" />
+            </svg>
+          </div>
+          <div class="relative pl-4 -mr-40 sm:mx-auto sm:max-w-3xl sm:px-0 lg:max-w-none lg:h-full lg:pl-12">
+            <%= link_to( image_tag("screenshot.png", :class => 'w-full rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none'), image_path( "screenshot.png", :class => 'w-full rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none') ) %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer section -->
+  <footer class="mt-24 bg-gray-900 sm:mt-12">
+    <div class="mx-auto max-w-md py-12 px-4 overflow-hidden sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+      <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
+        <div class="px-5 py-2">
+          <a href="https://orbit.love" class="text-base text-gray-400 hover:text-gray-300">
+            Orbit
+          </a>
+        </div>
+
+        <div class="px-5 py-2">
+          <a href="https://github.com/orbit-love/community-ruby-linkedin-orbit" class="text-base text-gray-400 hover:text-gray-300">
+            GitHub
+          </a>
+        </div>
+
+        <div class="px-5 py-2">
+          <a href="https://discord.orbit.love" class="text-base text-gray-400 hover:text-gray-300">
+            Discord
+          </a>
+        </div>
+
+        <div class="px-5 py-2">
+          <a href="mailto:devrel@orbit.love" class="text-base text-gray-400 hover:text-gray-300">
+            Contact Us
+          </a>
+        </div>
+      </nav>
+      <p class="mt-8 text-center text-base text-gray-400">
+        &copy; 2021 Orbit Labs, Inc. All rights reserved.
+      </p>
+    </div>
+  </footer>
