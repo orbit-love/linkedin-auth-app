@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
         :code => params[:code], 
         :client_id => ENV["LINKEDIN_CLIENT_ID"], 
         :client_secret => ENV["LINKEDIN_CLIENT_SECRET"],
-        :redirect_uri => "#{request.env[HTTP_HOST]}/auth/linkedin/callback"
+        :redirect_uri => "#{request.original_url}auth/linkedin/callback"
       })
       
       response = JSON.parse(response.body)
