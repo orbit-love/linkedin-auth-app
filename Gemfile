@@ -14,8 +14,9 @@ gem 'sass-rails', '>= 6'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-gem 'omniauth'
-gem 'omniauth-linkedin-oauth2'
+# gem 'omniauth'
+# gem 'omniauth-oauth2', '~> 1.7'
+# gem 'omniauth-linkedin-oauth2'
 gem 'bootstrap-sass'
 gem 'dotenv-rails'
 
