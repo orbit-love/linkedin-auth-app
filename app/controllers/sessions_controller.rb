@@ -6,7 +6,10 @@ class SessionsController < ApplicationController
     def new
       redirect_url = "#{request.base_url}/auth/linkedin/callback"
       loc = get_code_location(redirect_url)
-      redirect_to loc["location"]
+      redirect_to loc["location"] and return if loc["location"]
+
+      flash[:errors] = "Something went wrong ~~ \nLinkedIn API status code: #{loc.code} ~~ \nLinkedIn API response message: #{loc.message}"
+      redirect_to :controller => 'pages', :action => 'index'
     end
   
     def create
